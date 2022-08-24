@@ -5,7 +5,6 @@ from enum import (
 )
 from typing import NamedTuple
 
-
 @unique
 class TokenType(Enum):
     ASSIGN = auto()
@@ -22,7 +21,6 @@ class TokenType(Enum):
     RBRACE = auto()
     RPAREN = auto()
     SEMICOLON = auto()
-
 
 class Token(NamedTuple):
     token_type: TokenType
