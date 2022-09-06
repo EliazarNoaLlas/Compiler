@@ -22,6 +22,19 @@ class Lexer:
             token = Token(TokenType.PLUS, self._character)
         elif match(r'^$', self._character):
             token = Token(TokenType.EOF, self._character)
+#Delimitadores
+        elif match(r'^\($', self._character):
+            token = Token(TokenType.LPAREN, self._character)
+        elif match(r'^\)$', self._character):
+            token = Token(TokenType.RPAREN, self._character)
+        elif match(r'^{$', self._character):
+            token = Token(TokenType.LBRACE, self._character)
+        elif match(r'^}$', self._character):
+            token = Token(TokenType.RBRACE, self._character)
+        elif match(r'^,$', self._character):
+            token = Token(TokenType.COMMA, self._character)
+        elif match(r'^;$', self._character):
+            token = Token(TokenType.SEMICOLON, self._character)
         else:
             token = Token(TokenType.ILLEGAL, self._character)
         
